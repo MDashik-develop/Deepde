@@ -1,0 +1,249 @@
+
+:root {
+    --bx-shdw: 0px 0.650px 3px hsla(0, 0%, 0%, 0.178)!important;
+    --bdr-clr: #d1d9e6;
+    --bdr: 1px solid #d1d9e6;
+    --poppins: poppins, sans-serif;
+
+    --mt-app-sld-icon: 10px;
+    --mb-app-sld-icon: -38px;
+
+    --p-rslt-main-div: 0 10%;
+    --g-rslt-main-div: 21px;
+    --jc-rslt-main-div: center;
+    --w-rslt-fild: 100%;    
+
+    --fs-vdo-sldr-h2: 18px;
+    --w-vdo-sldr-img: 20px;
+    --mt-vdo-sldr-icon: 80px;
+    --mb-vdo-sldr-icon: -98px;
+    --w-app-card: 350px!important;
+
+    --fd-result-apps-all: ;
+    --fw-result-apps-all: wrap;
+    --w-result-apps-all: 46%;
+
+}
+/***** start main ******/
+
+.main-result-page{
+    padding: 0; 
+}
+/***** end main ******/
+/***** start suggest cards  *******/
+.apps-cty{
+    width: 100%;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.suggest-card-main{
+    padding: 10px 30px;
+}
+.suggest-sld-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--mt-app-sld-icon);
+    margin-bottom: var( --mb-app-sld-icon);
+    img{
+        position: relative;
+        z-index: 100;
+        background: rgba(128, 128, 128, 0.11);
+        backdrop-filter: blur(10px);
+        padding: 5px;
+        border-radius: 13px;
+        cursor: pointer;
+    }
+    img:first-child{
+        margin-left: -15px;
+    }
+    img:last-child{
+        margin-right: -15px;
+    }
+}
+.suggest-card-dev{
+    width: 98%;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    overflow-x: scroll;
+    .suggest-cards{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        gap: 6px;
+        border: var(--bdr);
+        font-family: var(--poppins);
+        background-color: white;
+        color: black;
+        height: 50px;
+        border-radius: 10px;
+        div:first-child{
+            min-width: 50px;
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+                min-height: 100%;
+            }
+        }
+        div:last-child{
+            h1{
+                font-size: 15px;
+                padding: 0;
+                margin: 0;
+                padding-right: 10px; 
+            }
+        }
+    }
+}
+.suggest-card-dev::-webkit-scrollbar {
+    display: none;
+}
+/***** end suggest cards  *******/
+/***** start result ******/
+.result-main-div{
+    margin: 18px 0;
+    padding: var(--p-rslt-main-div);
+    width: 100vw;
+    display: flex;
+    justify-content: var(--jc-rslt-main-div);
+    gap: var(--g-rslt-main-div);
+    .result-fild{
+        width: 100%;
+        border-radius: 15px;
+        padding: 10px 0px;
+        border-radius: 13px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+/********** start result app ************/
+.result-apps{
+    padding-top: 40px;
+    .result-apps-all{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; 
+            .result-app-card{
+                min-width: 170px!important;
+                height: 225px;
+                border-radius: 13px!important;
+                overflow: hidden;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    .result-app-card-top {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 60%;
+                        height: 60%;
+                        width: 100%;
+                        position: relative;
+                        overflow: hidden;
+                        .background-blur {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-size: 225% !important;
+                            background-repeat: no-repeat !important;
+                            filter: blur(10px);
+                            transform: scale(6.2);
+                            z-index: 0;
+                            z-index: 0;
+                        }
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            background: white;
+                            position: relative;
+                            z-index: 1;
+                            box-shadow: 0 0 15px rgba(255, 255, 255, 0.274);
+                            border-radius: 15px;
+                        }
+                    }
+                    .result-app-card-down{
+                        background-color: whitesmoke;
+                        min-height: 40%;
+                        height: 40%;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        h5{
+                            font-family: var(--poppins);
+                            font-size: 12px;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                        section{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            p{
+                                font-size: 12px;
+                                margin: 0;
+                                img{
+                                    width: 10px;
+                                    margin-top: -4px;
+                                }
+                            }
+                            span{
+                                
+                                font-size: 11px;
+                                backdrop-filter: blur(10px);
+                                border: var(--bdr);
+                                border-radius: 6px;
+                                padding: 1px 6px;
+                            }
+                        }
+                    }
+                }
+            }
+            .result-app-card:hover .result-app-card-down{
+                background-color: rgba(128, 128, 128, 0.226);
+            }
+    }
+}
+
+/*************** start view friendy responsive **************/
+
+/* start laptop view (up to 1020px) */
+@media (max-width: 1020px) {
+.result-infobox-main{
+    display: none;
+}
+ :root{
+    --d-rslt-inf-main: hidden!important;
+    --w-rslt-fild: 73%;
+ }
+}
+
+/* start tablet view (up to 1020px) */
+@media (max-width: 800px) {
+     :root{
+        --jc-rslt-main-div: center;
+        --w-result-apps-all: 95%;
+        --fw-result-apps-all: ;
+        --fd-result-apps-all: column;
+        --p-rslt-main-div: 0 1%;
+     }
+    }
+
+/* start mobile view (up to 1020px) */
+@media (max-width: 520px) {
+    :root{
+        --w-app-card: 280px !important;
+    }
+   }
